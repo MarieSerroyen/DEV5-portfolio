@@ -4,7 +4,7 @@ import Card from "./card.js";
 export default class Bingo {
   constructor() {
     // the constructor is called when you create a new instance of the class
-    console.log("Welcome to Bingo! 🎉");
+    //console.log("Welcome to Bingo! 🎉");
 
     // an array including 25 cards (5x5)
     this.cards = [
@@ -44,7 +44,7 @@ export default class Bingo {
 
   renderCards() {
     // this function renders the cards to the screen
-    console.log("rendering cards");
+    //console.log("rendering cards");
 
     // 🔥🔥🔥 TODO 2
     // loop through all the cards in the array and create a new instance of a Card()
@@ -64,7 +64,8 @@ export default class Bingo {
 
     // 🔥🔥🔥 TODO 6
     // count all cards that are marked as done (select done items and count them with .length)
-    /// let cardsDone = ;
+    let cardsDone = document.querySelectorAll(".bingo__card--done").length;
+    console.log(cardsDone);
     // if (cardsDone.length === 5) {
     // show the animated gif to the winner
     // document.querySelector(".bingo__overlay").style.display = "block";

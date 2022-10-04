@@ -10,8 +10,8 @@ export default class Card {
   markDone(target) {
     // to mark a card as done, we add a class .bingo__card--done to it
     // 🔥🔥🔥 TODO 5: mark or unmark (toggle) a bingo card when clicked
-    console.log("Marking card as done");
-    console.log(target);
+    //console.log("Marking card as done");
+    //console.log(target);
     // hint: use class .bingo__card--done
     target.classList.toggle("bingo__card--done");
   }
@@ -19,7 +19,7 @@ export default class Card {
   render(counter) {
     // rendering the card to the screen is done by building up a string of HTML
     // after that, we append the HTML to the DOM - check the index.html file to see what structure to use
-    console.log("Rendering card...");
+    //console.log("Rendering card...");
 
     // 🔥🔥🔥 TODO3: build the HTML element and append it to the DOM
     let card = document.createElement("div");
