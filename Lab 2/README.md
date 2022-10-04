@@ -10,7 +10,7 @@
 
 You can use the <b>includes()</b> method to check if an array contains an element. It returns true if an array contains a given element and false when it doesn't.
 
-**syntax** <br>
+**Syntax** <br>
 array.includes(element,fromIndex); <br>
 + element --> The element you're searching for. <br>
 + fromIndex --> The position in the array where you start the search. <br>
