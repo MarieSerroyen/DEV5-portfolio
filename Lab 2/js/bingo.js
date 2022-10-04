@@ -88,9 +88,10 @@ export default class Bingo {
     localStorage.setItem("bingo", JSON.stringify(cardsWon));
 
     // if there are not done cards, remove localstorage
-    // if (cards.length === 0) {
+    if (cards.length === 0 || cards.length >= 5) {
     // remove localstorage
-    // }
+        localStorage.removeItem("bingo");
+    }
 
     // save a selection like [1, 7, 8] to localstorage item "bingo"
     // you might want to check out how JSON.stringify() works
