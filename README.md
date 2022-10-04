@@ -4,3 +4,6 @@
 
 ## Week 1 - GIT
 * Lab 1: https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%201
+
+## Week 2 - Future Proof JS
+* Lab 2: https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%202
