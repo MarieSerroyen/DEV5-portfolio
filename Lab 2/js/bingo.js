@@ -102,12 +102,16 @@ export default class Bingo {
     // load the cards that are done from localstorage
     // this works the other way around of the save function
     // load the saved string from localstorage and parse it as an array, then loop over it
-    console.log("loading bingo selection from localstorage");
+    //console.log("loading bingo selection from localstorage");
 
     // check if localstorage item exists
     if (localStorage.getItem("bingo")) {
       let cardsWon = JSON.parse(localStorage.getItem("bingo"));
-    console.log(cardsWon);
+      //console.log(cardsWon);
+      for(let i=0; i<cardsWon.length; i++) {
+        let card = document.querySelector(`[data-number="${cardsWon[i]}"]`);
+        card.classList.add("bingo__card--done");
+      }
       // JSON.parse() will convert the string [1, 7, 8] back to an array which you can loop
       // loop over the numbers 1, 7, 8 and mark those cards as done by adding the right CSS class
       // .bingo__card--done
