@@ -5,6 +5,6 @@
 
 | Week | Lab | 
 | --- | --- |
-| Week 1 | [Lab 1 - GIT](https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%201) |
-| Week 2 | [Lab 2 - Future Proof JS](https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%202) |
+| 1 | [Lab 1 - GIT](https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%201) |
+| 2 | [Lab 2 - Future Proof JS](https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%202) |
 
