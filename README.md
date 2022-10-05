@@ -7,4 +7,4 @@
 | --- | --- |
 | 1 | [Lab 1 - GIT](https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%201) |
 | 2 | [Lab 2 - Future Proof JS](https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%202) |
-
+| 3 | [Lab 3 - App Prototypes](https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%203) |
