@@ -26,6 +26,7 @@ export default class App {
             .then(data => {
                 //console.log(data);
                 this.displayWeather(data);
+                this.getBookCover(data);
             })
     }
 
@@ -33,5 +34,9 @@ export default class App {
         const temp = data.current.temp_c;
         //console.log(temp);
         document.querySelector("h1").innerHTML = "It's " + temp + " °C outside";
+    }
+
+    getBookCover(data) {
+        console.log("Getting book cover");
     }
 }
