@@ -39,10 +39,18 @@ export default class App {
 
     getBookCover(data) {
         //console.log("Getting book cover");
-        fetch("https://covers.openlibrary.org/b/isbn/"+ this.bookISBN +"-M.jpg")
-            .then(response => {
-                console.log(response);
+        fetch("https://covers.openlibrary.org/b/isbn/"+ this.bookISBN +".json")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                this.showBookCover(data)
             })
 
+    }
+
+    showBookCover(data) {
+        const cover = data.source_url;
+        console.log(cover);
+        document.querySelector("#cover").src = cover;
     }
 }
