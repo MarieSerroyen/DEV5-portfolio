@@ -15,6 +15,9 @@ export default class App {
     }
 
     getWeather(position) {
-        console.log(position);
+        //console.log(position);
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        console.log(lat, lon);
     }
 }
