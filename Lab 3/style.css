@@ -1,0 +1,10 @@
+#ad {
+  width: 300px;
+  height: 600px;
+}
+
+#ad .logo {
+  width: 12em;
+  display: block;
+  margin: 0 auto;
+}
