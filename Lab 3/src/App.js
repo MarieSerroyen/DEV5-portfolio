@@ -31,6 +31,7 @@ export default class App {
 
     displayWeather(data) {
         const temp = data.current.temp_c;
-        console.log(temp);
+        //console.log(temp);
+        document.querySelector("h1").innerHTML = "It's " + temp + " °C outside";
     }
 }
