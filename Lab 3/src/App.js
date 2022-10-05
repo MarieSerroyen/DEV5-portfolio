@@ -24,8 +24,13 @@ export default class App {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                
+                //console.log(data);
+                this.displayWeather(data);
             })
+    }
+
+    displayWeather(data) {
+        const temp = data.current.temp_c;
+        console.log(temp);
     }
 }
