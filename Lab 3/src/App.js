@@ -3,6 +3,7 @@ export default class App {
         this.apiKey = api_key;
         //console.log("Class works!! " + this.apiKey);
         this.getLocation();
+        this.bookISBN = "9780141036144";
     }
 
     getLocation() {
@@ -37,6 +38,11 @@ export default class App {
     }
 
     getBookCover(data) {
-        console.log("Getting book cover");
+        //console.log("Getting book cover");
+        fetch("https://covers.openlibrary.org/b/isbn/"+ this.bookISBN +"-M.jpg")
+            .then(response => {
+                console.log(response);
+            })
+
     }
 }
