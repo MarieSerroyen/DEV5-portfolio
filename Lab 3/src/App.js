@@ -6,7 +6,15 @@ export default class App {
     }
 
     getLocation() {
-        console.log("Getting the location");
+        //console.log("Getting the location");
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(this.getWeather.bind(this));
+        } else {
+            console.log("Geolocation is not supported by this browser.");
+        }
     }
 
+    getWeather(position) {
+        console.log(position);
+    }
 }
