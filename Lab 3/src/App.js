@@ -41,9 +41,6 @@ export default class App {
                 //save timestamp to local storage
                 localStorage.setItem("timestamp", Date.now());
 
-                //save book cover to local storage
-                localStorage.setItem("bookCover", this.getBookCover(data));
-
                 this.displayWeather(data);
                 this.getBookCover(data);
             })
@@ -93,7 +90,10 @@ export default class App {
         fetch("https://covers.openlibrary.org/b/isbn/"+ this.bookISBN +".json")
             .then(response => response.json())
             .then(data => {
-                //console.log(data);
+                console.log(data);
+
+                //save bookcover to local storage
+                localStorage.setItem("bookcover", JSON.stringify(data));
                 this.showBookCover(data)
             })
 
