@@ -33,7 +33,7 @@ export default class App {
 
     displayWeather(data) {
         //const temp = data.current.temp_c;
-        let temp = "15";
+        let temp = "20";
         //console.log(temp);
         document.querySelector("h1").innerHTML = "It's " + temp + " °C outside";
 
@@ -51,6 +51,9 @@ export default class App {
         }
         else if (temp >= 15 && temp < 20) {
             this.bookISBN = "9780593300916"; //Six Crimson Cranes
+        }
+        else if (temp >= 20 && temp < 25) {
+            this.bookISBN = "9780062662835"; //With the Fire on High
         }
     }
 
