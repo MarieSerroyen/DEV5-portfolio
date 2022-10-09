@@ -23,10 +23,12 @@
   color: #F7F7F7;
   font-size: 20px;
   padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #cover {
-  max-width: 50%;
+  max-width: 70%;
   display: block;
   margin: 0 auto;
 }

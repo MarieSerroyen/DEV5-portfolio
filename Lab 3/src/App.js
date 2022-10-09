@@ -26,14 +26,19 @@ export default class App {
             .then(response => response.json())
             .then(data => {
                 //console.log(data);
+                //save data to local storage
+                localStorage.setItem("weather", JSON.stringify(data));
+
+                //save timestamp to local storage
+                localStorage.setItem("timestamp", Date.now());
+
                 this.displayWeather(data);
                 this.getBookCover(data);
             })
     }
 
     displayWeather(data) {
-        //const temp = data.current.temp_c;
-        let temp = "30";
+        const temp = data.current.temp_c;
         //console.log(temp);
         document.querySelector("h1").innerHTML = "Het is " + temp + " °C buiten";
 
@@ -76,7 +81,7 @@ export default class App {
         fetch("https://covers.openlibrary.org/b/isbn/"+ this.bookISBN +".json")
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                //console.log(data);
                 this.showBookCover(data)
             })
 
