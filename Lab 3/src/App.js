@@ -50,7 +50,7 @@ export default class App {
 
     showBookCover(data) {
         const cover = data.source_url;
-        console.log(cover);
+        //console.log(cover);
         document.querySelector("#cover").src = cover;
     }
 }
