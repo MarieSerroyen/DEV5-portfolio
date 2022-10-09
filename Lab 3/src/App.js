@@ -33,7 +33,7 @@ export default class App {
 
     displayWeather(data) {
         //const temp = data.current.temp_c;
-        let temp = "5";
+        let temp = "10";
         //console.log(temp);
         document.querySelector("h1").innerHTML = "It's " + temp + " °C outside";
 
@@ -45,6 +45,9 @@ export default class App {
         }
         else if (temp >= 5 && temp < 10) {
             this.bookISBN = "9780316273497"; //Stalking Jack the Ripper
+        }
+        else if (temp >= 10 && temp < 15) {
+            this.bookISBN = "1501139231"; //The Seven Husbands of Evelyn Hugo
         }
     }
 
