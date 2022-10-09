@@ -33,7 +33,7 @@ export default class App {
 
     displayWeather(data) {
         //const temp = data.current.temp_c;
-        let temp = "20";
+        let temp = "25";
         //console.log(temp);
         document.querySelector("h1").innerHTML = "It's " + temp + " °C outside";
 
@@ -54,6 +54,9 @@ export default class App {
         }
         else if (temp >= 20 && temp < 25) {
             this.bookISBN = "9780062662835"; //With the Fire on High
+        }
+        else if (temp >= 25 && temp < 30) {
+            this.bookISBN = "9781984806758"; //People We Meet on Vacation
         }
     }
 
