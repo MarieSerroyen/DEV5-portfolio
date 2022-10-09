@@ -5,9 +5,16 @@
 }
 
 #ad .logo {
-  width: 12em;
+  width: 14em;
   display: block;
   margin: 0 auto;
+  padding-top: 15px;
+}
+
+.weather {
+  text-align: center;
+  color: #F7F7F7;
+  font-size: 30px;
   padding-top: 10px;
 }
 
