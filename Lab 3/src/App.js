@@ -33,7 +33,7 @@ export default class App {
 
     displayWeather(data) {
         //const temp = data.current.temp_c;
-        let temp = "25";
+        let temp = "30";
         //console.log(temp);
         document.querySelector("h1").innerHTML = "It's " + temp + " °C outside";
 
@@ -57,6 +57,9 @@ export default class App {
         }
         else if (temp >= 25 && temp < 30) {
             this.bookISBN = "9781984806758"; //People We Meet on Vacation
+        }
+        else if (temp >= 30) {
+            this.bookISBN = "9781406372328"; //Love & Gelato
         }
     }
 
