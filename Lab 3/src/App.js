@@ -33,7 +33,7 @@ export default class App {
 
     displayWeather(data) {
         //const temp = data.current.temp_c;
-        let temp = "0";
+        let temp = "5";
         //console.log(temp);
         document.querySelector("h1").innerHTML = "It's " + temp + " °C outside";
 
@@ -42,6 +42,9 @@ export default class App {
         }
         else if (temp >= 0 && temp < 5) {
             this.bookISBN = "9781444753424"; //Daughter of Smoke and Bone
+        }
+        else if (temp >= 5 && temp < 10) {
+            this.bookISBN = "9780316273497"; //Stalking Jack the Ripper
         }
     }
 
