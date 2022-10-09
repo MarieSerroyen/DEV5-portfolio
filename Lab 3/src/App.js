@@ -2,7 +2,16 @@ export default class App {
     constructor(api_key) {
         this.apiKey = api_key;
         //console.log("Class works!! " + this.apiKey);
-        this.getLocation();
+
+        //check if timestamp is older than 10 minutes
+        if (localStorage.getItem('weather') && Date.now() - localStorage.getItem('timestamp') < 600000) {
+            const weatherData = JSON.parse(localStorage.getItem('weather'));
+           let test = this.displayWeather(weatherData);
+            console.log("Weather data from local storage");
+            console.log(test);
+        } else {
+            this.getLocation();
+        }
         this.bookISBN = "";
     }
 
@@ -31,6 +40,9 @@ export default class App {
 
                 //save timestamp to local storage
                 localStorage.setItem("timestamp", Date.now());
+
+                //save book cover to local storage
+                localStorage.setItem("bookCover", this.getBookCover(data));
 
                 this.displayWeather(data);
                 this.getBookCover(data);
