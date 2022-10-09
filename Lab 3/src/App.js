@@ -3,7 +3,7 @@ export default class App {
         this.apiKey = api_key;
         //console.log("Class works!! " + this.apiKey);
         this.getLocation();
-        this.bookISBN = "9780141036144";
+        this.bookISBN = "";
     }
 
     getLocation() {
@@ -33,8 +33,14 @@ export default class App {
 
     displayWeather(data) {
         const temp = data.current.temp_c;
+        //let temp = "-10";
         //console.log(temp);
         document.querySelector("h1").innerHTML = "It's " + temp + " °C outside";
+
+        if(temp < 0) {
+            this.bookISBN = "9781101885956"; //The Bear and the Nightingale
+        }
+        
     }
 
     getBookCover(data) {
