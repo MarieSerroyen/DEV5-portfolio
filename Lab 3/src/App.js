@@ -32,15 +32,17 @@ export default class App {
     }
 
     displayWeather(data) {
-        const temp = data.current.temp_c;
-        //let temp = "-10";
+        //const temp = data.current.temp_c;
+        let temp = "0";
         //console.log(temp);
         document.querySelector("h1").innerHTML = "It's " + temp + " °C outside";
 
         if(temp < 0) {
             this.bookISBN = "9781101885956"; //The Bear and the Nightingale
         }
-        
+        else if (temp >= 0 && temp < 5) {
+            this.bookISBN = "9781444753424"; //Daughter of Smoke and Bone
+        }
     }
 
     getBookCover(data) {
