@@ -1,11 +1,16 @@
 #ad {
   width: 300px;
   height: 600px;
-  background-color: #0B3379;
+  background-color: #F19C38;
 }
 
 #ad .logo {
   width: 12em;
   display: block;
   margin: 0 auto;
+  padding-top: 10px;
+}
+
+#cover {
+  max-width: 50%;
 }
