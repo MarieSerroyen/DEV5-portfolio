@@ -4,11 +4,14 @@ export default class App {
         //console.log("Class works!! " + this.apiKey);
 
         //check if timestamp is older than 10 minutes
-        if (localStorage.getItem('weather') && Date.now() - localStorage.getItem('timestamp') < 600000) {
+        if (localStorage.getItem('weather') && localStorage.getItem('bookcover') && Date.now() - localStorage.getItem('timestamp') < 600000) {
             const weatherData = JSON.parse(localStorage.getItem('weather'));
-           let test = this.displayWeather(weatherData);
+            const bookCoverData = JSON.parse(localStorage.getItem('bookcover'));
+            //console.log(bookCoverData);
+            this.displayWeather(weatherData);
+            this.showBookCover(bookCoverData);
             console.log("Weather data from local storage");
-            console.log(test);
+            //console.log(weatherData);
         } else {
             this.getLocation();
         }
