@@ -32,7 +32,7 @@ scene.add( directionalLight );
 /*const directionalLightHelper = new THREE.DirectionalLightHelper( directionalLight, 4 ); //2 grote van uw helper
 scene.add( directionalLightHelper );*/
 
-camera.position.z = 40;
+camera.position.z = 200;
 camera.position.y = 20;
 
 const house = new House();
@@ -58,6 +58,8 @@ for (let i = 0; i < 20; i++) {
 function animate() {
     requestAnimationFrame( animate );
 
+    camera.position.z -= 0.1;
+    
     renderer.render( scene, camera );
 };
 
