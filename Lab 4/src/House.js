@@ -13,10 +13,16 @@ export default class House {
 		const material = new THREE.MeshBasicMaterial( { color: 0xF7D291 } );
 		const backWall = new THREE.Mesh( geometry, material );
 		const frontWall = new THREE.Mesh( geometry, material );
+		const leftWall = new THREE.Mesh( geometry, material );
+		const rightWall = new THREE.Mesh( geometry, material );
 
 		backWall.position.set(0, 7.5, -10);
-		frontWall.position.set(0, 7.5, 7.5);
+		frontWall.position.set(0, 7.5, 10);
+		leftWall.position.set(-9.5, 7.5, 0);
+		leftWall.rotation.y = Math.PI / 2;
+		rightWall.position.set(9.5, 7.5, 0);
+		rightWall.rotation.y = Math.PI / 2;
 
-		this.group.add( backWall, frontWall );		
+		this.group.add( backWall, frontWall, leftWall, rightWall );		
     }
 }
