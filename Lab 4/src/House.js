@@ -8,6 +8,7 @@ export default class House {
 		this.createRoof();
 		this.createRoofTower();
 		this.createDoor();
+		this.createFlag();
     }
 
     createWalls() {
@@ -16,7 +17,7 @@ export default class House {
 
 		const geometry = new THREE.BoxGeometry( 20, 16, 1 );
 		const material = new THREE.MeshBasicMaterial( { color: 0xF7D291 } );
-		material.map = grainsTexture;		
+		material.map = grainsTexture;	
 
 		const backWall = new THREE.Mesh( geometry, material );
 		const frontWall = new THREE.Mesh( geometry, material );
@@ -31,7 +32,8 @@ export default class House {
 		rightWall.position.set(9.5, 7.5, 0);
 		rightWall.rotation.y = Math.PI / 2;
 
-		this.group.add( backWall, frontWall, leftWall, rightWall );		
+		this.group.add( backWall, frontWall, leftWall, rightWall);		
+		
     }
 
 	createRoof() {
@@ -75,5 +77,14 @@ export default class House {
 		const door = new THREE.Mesh( doorGeometry, doorMaterial );
 		door.position.set(0, 4.5, 10.7);
 		this.group.add( door );
+	}
+
+	createFlag() {
+		//create flag pole
+		const poleGeometry = new THREE.CylinderGeometry( 0.2, 0.2, 6, 15 );
+		const poleMaterial = new THREE.MeshBasicMaterial( { color: 0xD2D2D0} );
+		const pole = new THREE.Mesh( poleGeometry, poleMaterial );
+		pole.position.y = 25;
+		this.group.add( pole );
 	}
 }
