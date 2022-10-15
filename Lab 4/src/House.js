@@ -5,12 +5,14 @@ export default class House {
         //console.log("I'm working!");
 		this.group = new THREE.Group();
         this.createWalls();
+		this.createRoof();
     }
 
     createWalls() {
         //console.log('yep');
 		const geometry = new THREE.BoxGeometry( 20, 16, 1 );
 		const material = new THREE.MeshBasicMaterial( { color: 0xF7D291 } );
+
 		const backWall = new THREE.Mesh( geometry, material );
 		const frontWall = new THREE.Mesh( geometry, material );
 		const leftWall = new THREE.Mesh( geometry, material );
@@ -25,4 +27,13 @@ export default class House {
 
 		this.group.add( backWall, frontWall, leftWall, rightWall );		
     }
+
+	createRoof() {
+		//create flat roof
+		const roofGeometry = new THREE.BoxGeometry( 20, 1, 21 );
+		const roofMaterial = new THREE.MeshBasicMaterial( { color: 0xF7D291 } );
+		const roof = new THREE.Mesh( roofGeometry, roofMaterial );
+		roof.position.set(0, 16, 0);
+		this.group.add( roof );
+	}
 }

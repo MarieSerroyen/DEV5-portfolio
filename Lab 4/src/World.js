@@ -9,7 +9,7 @@ export default class World {
 
     createSky() {
         //console.log("It works");
-        const skyGeometry = new THREE.SphereGeometry( 100, 32, 32 );
+        const skyGeometry = new THREE.SphereGeometry( 200, 32, 32 );
         const skyMaterial = new THREE.MeshBasicMaterial( {color: 0x73C2FB} );
         skyMaterial.side = THREE.BackSide;
         const sky = new THREE.Mesh( skyGeometry, skyMaterial );
@@ -20,7 +20,7 @@ export default class World {
         const textureLoader = new THREE.TextureLoader();
         const sandTexture = textureLoader.load('assets/textures/sand.jpg');
 
-        const sandGeometry = new THREE.BoxGeometry( 90, 0.1, 90 );
+        const sandGeometry = new THREE.BoxGeometry( 100, 0.1, 100 );
         const sandMaterial = new THREE.MeshBasicMaterial( {color: 0xffffff} );
         sandMaterial.map = sandTexture;
         const sand = new THREE.Mesh( sandGeometry, sandMaterial );
