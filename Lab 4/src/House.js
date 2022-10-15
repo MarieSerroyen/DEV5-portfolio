@@ -71,7 +71,7 @@ export default class House {
 		const textureLoader = new THREE.TextureLoader();
         const doorTexture = textureLoader.load('assets/textures/door.jpg');
 
-		const doorGeometry = new THREE.BoxGeometry( 8, 10, 0 );
+		const doorGeometry = new THREE.PlaneGeometry( 8, 10 );
 		const doorMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
 		doorMaterial.map = doorTexture;
 		const door = new THREE.Mesh( doorGeometry, doorMaterial );
@@ -85,6 +85,13 @@ export default class House {
 		const poleMaterial = new THREE.MeshBasicMaterial( { color: 0xD2D2D0} );
 		const pole = new THREE.Mesh( poleGeometry, poleMaterial );
 		pole.position.y = 25;
-		this.group.add( pole );
+
+		//create flag
+		const flagGeometry = new THREE.PlaneGeometry( 1, 1 );
+		const flagMaterial = new THREE.MeshBasicMaterial( { color: 0x000000 } );
+		const flag = new THREE.Mesh( flagGeometry, flagMaterial );
+		flag.position.set(1.5, 27, 0);
+		flag.scale.set(3, 2, 5);
+		this.group.add( pole, flag );
 	}
 }

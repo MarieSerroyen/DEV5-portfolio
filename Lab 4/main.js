@@ -18,7 +18,7 @@ document.body.appendChild( renderer.domElement );
 const controls = new OrbitControls(camera, renderer.domElement);
 
 camera.position.z = 40;
-camera.position.y = 10;
+camera.position.y = 20;
 
 const house = new House();
 scene.add(house.group);
