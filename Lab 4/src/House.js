@@ -45,5 +45,12 @@ export default class House {
 		const tower = new THREE.Mesh( towerGeometry, towerMaterial );
 		tower.position.set(0, 20, 0);
 		this.group.add( tower );
+
+		//add window
+		const windowGeometry = new THREE.BoxGeometry( 1, 1, 1 );
+		const windowMaterial = new THREE.MeshBasicMaterial( { color: 0x000000 } );
+		const window = new THREE.Mesh( windowGeometry, windowMaterial );
+		window.position.set(0, 21, 4);
+		this.group.add( window );
 	}
 }
