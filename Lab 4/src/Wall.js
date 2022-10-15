@@ -5,6 +5,7 @@ export default class Wall {
         //console.log("I'm working!");
 		this.group = new THREE.Group();
         this.createTowers();
+        this.createTowerWindows();
     }
 
     createTowers() {
@@ -26,5 +27,20 @@ export default class Wall {
         tower4.position.set(20, 5.5, -25);
 		
         this.group.add( tower1, tower2, tower3, tower4);
+    }
+
+    createTowerWindows() {
+        const windowGeometry = new THREE.BoxGeometry( 1.5, 1.5, 1 );
+		const windowMaterial = new THREE.MeshBasicMaterial( { color: 0x000000 } );
+		
+        const window1 = new THREE.Mesh( windowGeometry, windowMaterial );
+        const window2 = new THREE.Mesh( windowGeometry, windowMaterial );
+        const window3 = new THREE.Mesh( windowGeometry, windowMaterial );
+		
+        window1.position.set(-20, 8, 28.6);
+        window2.position.set(20, 8, 28.6);
+        window3.position.set(0, 8, 28.6);
+		
+        this.group.add( window1, window2, window3);
     }
 }
