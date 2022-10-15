@@ -7,6 +7,7 @@ import House from "./src/House.js";
 import World from "./src/World.js";
 import Wall from "./src/Wall.js";
 import Shells from "./src/Shells.js";
+import Flag from "./src/Flag.js";
 
 
 const scene = new THREE.Scene();
@@ -32,11 +33,12 @@ scene.add( directionalLight );
 /*const directionalLightHelper = new THREE.DirectionalLightHelper( directionalLight, 4 ); //2 grote van uw helper
 scene.add( directionalLightHelper );*/
 
-camera.position.z = 200;
+camera.position.z = 150;
 camera.position.y = 20;
 
 const house = new House();
 scene.add(house.group);
+
 
 const world = new World();
 scene.add(world.group);
@@ -44,6 +46,8 @@ scene.add(world.group);
 const wall = new Wall();
 scene.add(wall.group);
 
+const flag = new Flag();
+scene.add(flag.group);
 
 //for loop shells
 for (let i = 0; i < 20; i++) {
@@ -61,8 +65,11 @@ function animate() {
     if (camera.position.z > 5){
         camera.position.z -= 0.1;
     } else {
-        camera.position.z = 200;
-    }    
+        camera.position.z = 150;
+    } 
+
+    flag.group.rotation.y += 0.01;
+
     //console.log(camera.position);
     renderer.render( scene, camera );
 };
