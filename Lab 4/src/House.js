@@ -56,9 +56,12 @@ export default class House {
 	}
 
 	createDoor() {
-		
+		const textureLoader = new THREE.TextureLoader();
+        const doorTexture = textureLoader.load('assets/textures/door.jpg');
+
 		const doorGeometry = new THREE.BoxGeometry( 8, 10, 0 );
 		const doorMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+		doorMaterial.map = doorTexture;
 		const door = new THREE.Mesh( doorGeometry, doorMaterial );
 		door.position.set(0, 4.5, 10.7);
 		this.group.add( door );
