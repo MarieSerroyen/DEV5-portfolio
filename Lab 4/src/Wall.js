@@ -35,12 +35,10 @@ export default class Wall {
 		
         const window1 = new THREE.Mesh( windowGeometry, windowMaterial );
         const window2 = new THREE.Mesh( windowGeometry, windowMaterial );
-        const window3 = new THREE.Mesh( windowGeometry, windowMaterial );
 		
         window1.position.set(-20, 8, 28.6);
         window2.position.set(20, 8, 28.6);
-        window3.position.set(0, 8, 28.6);
 		
-        this.group.add( window1, window2, window3);
+        this.group.add( window1, window2);
     }
 }
