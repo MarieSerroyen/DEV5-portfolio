@@ -60,7 +60,7 @@ export default class House {
 		this.group.add( tower );
 
 		//add window
-		const windowGeometry = new THREE.BoxGeometry( 1, 1, 1 );
+		const windowGeometry = new THREE.BoxGeometry( 1.5, 1.5, 1 );
 		const windowMaterial = new THREE.MeshBasicMaterial( { color: 0x000000 } );
 		const window = new THREE.Mesh( windowGeometry, windowMaterial );
 		window.position.set(0, 21, 4);

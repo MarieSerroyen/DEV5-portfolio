@@ -5,6 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 //Classes
 import House from "./src/House.js";
 import World from "./src/World.js";
+import Wall from "./src/Wall.js";
 
 
 const scene = new THREE.Scene();
@@ -25,6 +26,9 @@ scene.add(house.group);
 
 const world = new World();
 scene.add(world.group);
+
+const wall = new Wall();
+scene.add(wall.group);
 
 function animate() {
     requestAnimationFrame( animate );
