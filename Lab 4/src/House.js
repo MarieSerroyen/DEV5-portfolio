@@ -6,6 +6,7 @@ export default class House {
 		this.group = new THREE.Group();
         this.createWalls();
 		this.createRoof();
+		this.createRoofTower();
     }
 
     createWalls() {
@@ -35,5 +36,14 @@ export default class House {
 		const roof = new THREE.Mesh( roofGeometry, roofMaterial );
 		roof.position.set(0, 16, 0);
 		this.group.add( roof );
+	}
+
+	createRoofTower() {
+		//create tower
+		const towerGeometry = new THREE.CylinderGeometry( 3, 6, 9, 15 );
+		const towerMaterial = new THREE.MeshBasicMaterial( { color: 0xF7D291 } );
+		const tower = new THREE.Mesh( towerGeometry, towerMaterial );
+		tower.position.set(0, 20, 0);
+		this.group.add( tower );
 	}
 }
