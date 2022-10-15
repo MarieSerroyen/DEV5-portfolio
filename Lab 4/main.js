@@ -6,6 +6,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import House from "./src/House.js";
 import World from "./src/World.js";
 import Wall from "./src/Wall.js";
+import Shells from "./src/Shells.js";
 
 
 const scene = new THREE.Scene();
@@ -29,6 +30,17 @@ scene.add(world.group);
 
 const wall = new Wall();
 scene.add(wall.group);
+
+
+//for loop shells
+for (let i = 0; i < 20; i++) {
+    const x = Math.random() * 80 - 40;
+    const z = Math.random() * 80 - 40;
+    if (x > 10 || x < -10 || z > 10 || z < -10) {
+        const shells = new Shells(x, z);
+        scene.add(shells.group);
+    }
+}
 
 function animate() {
     requestAnimationFrame( animate );
