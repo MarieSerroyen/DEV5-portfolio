@@ -19,6 +19,19 @@ document.body.appendChild( renderer.domElement );
 //add orbit controls
 const controls = new OrbitControls(camera, renderer.domElement);
 
+//add ambient light
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+scene.add(ambientLight);
+
+//add directional light
+const directionalLight = new THREE.DirectionalLight( 0xFFFFFF, 0.5 );
+directionalLight.position.set(30,35,10);
+scene.add( directionalLight );
+
+// add directional light helper
+/*const directionalLightHelper = new THREE.DirectionalLightHelper( directionalLight, 4 ); //2 grote van uw helper
+scene.add( directionalLightHelper );*/
+
 camera.position.z = 40;
 camera.position.y = 20;
 
