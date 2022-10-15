@@ -28,9 +28,6 @@ scene.add(world.group);
 function animate() {
     requestAnimationFrame( animate );
 
-    house.group.rotation.x += 0.01;
-    house.group.rotation.y += 0.01;
-
     renderer.render( scene, camera );
 };
 

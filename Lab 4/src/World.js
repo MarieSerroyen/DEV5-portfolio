@@ -20,11 +20,11 @@ export default class World {
         const textureLoader = new THREE.TextureLoader();
         const sandTexture = textureLoader.load('assets/textures/sand.jpg');
 
-        const sandGeometry = new THREE.BoxGeometry( 70, 0.1, 70 );
+        const sandGeometry = new THREE.BoxGeometry( 90, 0.1, 90 );
         const sandMaterial = new THREE.MeshBasicMaterial( {color: 0xffffff} );
         sandMaterial.map = sandTexture;
         const sand = new THREE.Mesh( sandGeometry, sandMaterial );
-        sand.position.y = -0.05;
+        sand.position.y = -0.70;
         this.group.add( sand );
     }
 }
