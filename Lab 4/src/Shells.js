@@ -19,8 +19,7 @@ export default class Shells {
                 }
             });
             shell.scale.set(0.1, 0.1, 0.1);
-            shell.position.x = x;
-            shell.position.z = z;
+            shell.position.set(x, 0, z);
             shell.rotation.x = Math.PI / -2;
             this.group.add(shell);
         });

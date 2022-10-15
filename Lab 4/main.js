@@ -50,9 +50,9 @@ const flag = new Flag();
 scene.add(flag.group);
 
 //for loop shells
-for (let i = 0; i < 20; i++) {
-    const x = Math.random() * 80 - 40;
-    const z = Math.random() * 80 - 40;
+for (let i = 0; i < 15; i++) {
+    const x = Math.random() * 60 - 40;
+    const z = Math.random() * 60 - 40;
     if (x > 10 || x < -10 || z > 10 || z < -10) {
         const shells = new Shells(x, z);
         scene.add(shells.group);
