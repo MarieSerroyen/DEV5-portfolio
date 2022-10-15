@@ -11,14 +11,18 @@ export default class House {
     }
 
     createWalls() {
-        //console.log('yep');
+        const textureLoader = new THREE.TextureLoader();
+        const grainsTexture = textureLoader.load('assets/textures/grains.jpg');
+
 		const geometry = new THREE.BoxGeometry( 20, 16, 1 );
 		const material = new THREE.MeshBasicMaterial( { color: 0xF7D291 } );
+		material.map = grainsTexture;		
 
 		const backWall = new THREE.Mesh( geometry, material );
 		const frontWall = new THREE.Mesh( geometry, material );
 		const leftWall = new THREE.Mesh( geometry, material );
 		const rightWall = new THREE.Mesh( geometry, material );
+
 
 		backWall.position.set(0, 7.5, -10);
 		frontWall.position.set(0, 7.5, 10);
@@ -31,18 +35,24 @@ export default class House {
     }
 
 	createRoof() {
-		//create flat roof
+		const textureLoader = new THREE.TextureLoader();
+        const grainsTexture = textureLoader.load('assets/textures/grains.jpg');
+
 		const roofGeometry = new THREE.BoxGeometry( 20, 1, 21 );
 		const roofMaterial = new THREE.MeshBasicMaterial( { color: 0xF7D291 } );
+		roofMaterial.map = grainsTexture;
 		const roof = new THREE.Mesh( roofGeometry, roofMaterial );
 		roof.position.set(0, 16, 0);
 		this.group.add( roof );
 	}
 
 	createRoofTower() {
-		//create tower
+		const textureLoader = new THREE.TextureLoader();
+        const grainsTexture = textureLoader.load('assets/textures/grains.jpg');
+
 		const towerGeometry = new THREE.CylinderGeometry( 3, 6, 9, 15 );
 		const towerMaterial = new THREE.MeshBasicMaterial( { color: 0xF7D291 } );
+		towerMaterial.map = grainsTexture;
 		const tower = new THREE.Mesh( towerGeometry, towerMaterial );
 		tower.position.set(0, 20, 0);
 		this.group.add( tower );
