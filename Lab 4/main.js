@@ -58,8 +58,12 @@ for (let i = 0; i < 20; i++) {
 function animate() {
     requestAnimationFrame( animate );
 
-    camera.position.z -= 0.1;
-    
+    if (camera.position.z > 5){
+        camera.position.z -= 0.1;
+    } else {
+        camera.position.z = 200;
+    }    
+    //console.log(camera.position);
     renderer.render( scene, camera );
 };
 
