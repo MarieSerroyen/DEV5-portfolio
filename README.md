@@ -10,3 +10,4 @@
 | 3 | [Lab 3 - App Prototypes](https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%203) |
 | 4 | [Lab 4 - THREE.js](https://github.com/MarieSerroyen/DEV5-portfolio/tree/main/Lab%204) |
 | 5 | [Lab 5 - Node.js](https://github.com/MarieSerroyen/dev5-lab5) |
+| 6 | [Lab 6 - Vue.js](https://github.com/MarieSerroyen/dev5-lab6) |
